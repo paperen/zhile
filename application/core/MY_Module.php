@@ -16,7 +16,7 @@ class MY_Module extends CI_Module
 	}
 
 	private function _valid_user() {
-		
+		if ( empty( $this->session->uid ) ) redirect( module_url('common/user/login') );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class MY_Module extends CI_Module
 			$model_name = $single['model'];
 			$method_name = $single['method'];
 			$this->load->model( $model_name );
-			if ( !isset( $this->$model_name  ) ) continue;
+			if ( !isset( $this->$model_name ) ) continue;
 			if ( !in_array( $method_name, get_class_methods( $this->$model_name ) ) ) continue;
 			return call_user_func_array( array( $this->$model_name, $method_name ), $arguments );
 		}

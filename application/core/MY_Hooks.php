@@ -4,7 +4,6 @@
  * 继承CI_Hooks，在其基础上加入了允许动态注册钩子的方法
  * @author 梁子恩
  * @version 0.0
- * @package njsystem
  * @subpackage application/core
  */
 class MY_Hooks extends CI_Hooks

@@ -37,6 +37,7 @@ class MY_Form_validation extends CI_Form_validation
 
 		// 是否调试模式
 		$this->_debug = ( defined( 'ENVIRONMENT' ) && ENVIRONMENT == 'development' ) ? TRUE : FALSE;
+		$this->_debug = FALSE;
 
 		// 设置错误定界符
 		$this->set_error_delimiters( self::ERROR_PERFIX, self::ERROR_SUFFIX );

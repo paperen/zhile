@@ -18,7 +18,7 @@
 <div class="container">
 
 <div class="masthead">
-	<h3 class="muted">Mr.Known</h3>
+	<h3 class="muted"><?php echo config_item('app_name'); ?></h3>
 </div>
 <hr>
 <div class="container">
